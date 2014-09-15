@@ -30,7 +30,7 @@ import java.awt.event.KeyAdapter;
 
 public class Interfeces extends JFrame {
 	/**
-	 *  LOL interfeces. (oh god, there's a poop joke in my code...)
+	 * 
 	 */
 	private boolean notifyMe;
 	private dummyFrame dummy = new dummyFrame();
@@ -228,6 +228,9 @@ public class Interfeces extends JFrame {
 				stringMOTD = status.getDescription();
 				MOTD.setText(stringMOTD);
 				connectedPlayers = "";
+				if (status.getPlayers().getOnline() == 0) {
+					UserList.setText("Nobody is playing currently.");
+				}
 				if (status.getPlayers() != null) {
 					if ((status.getPlayers().getSample().size()) <= 0) {
 						UserList.setText("Nobody is playing currently;");
@@ -305,8 +308,8 @@ public class Interfeces extends JFrame {
 		//a = a.replaceAll("]", "");
 		//a = a.replaceAll("{", "");
 		//§b§l§
-		a = a.replaceAll("Ǣ, "");
-		a = a.replaceAll("¢, "");
+		a = a.replaceAll("�", "");
+		a = a.replaceAll("�", "");
 		a = a.replaceAll("|", "");
 		a = a.replaceAll("`", "");
 		a = a.replaceAll("~", "");
